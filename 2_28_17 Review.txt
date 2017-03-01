@@ -1,0 +1,89 @@
+CS232 First Three Chapters
+
+Stacks and Queues Applications
+
+Stacks
+Linked List vs Array implementation (Array Best)
+Look at code
+How to grow/shrink arrays (Copy into array 2x size) or (Shrink when 1/4 full)
+Look at time complexity
+
+Queues
+Linked List vs Array implementation (Array Best)
+Look at Positioning of data in array
+
+Algorithm Running Time
+Cubic, Quadratic, Linearithmic (almost linear), Linear, etc.
+Log Log Plot (Log of x and y axis, means time is aN^b) Find b
+Know how to find running times in loops
+MergeSort = O(NlogN)	T(n)=2T(n/2)+O(n)
+**When finding time complexity, it really helps to know exactly what the algorithm is doing
+**Draw pictures
+MergeSort time complexity explanation? Youtube
+HeapSort also has worst time of O(NlogN)
+
+Union Find
+Think of it as a graph with vertices/edges
+2 Things:
+-Want to draw new edge any time in graph
+-Determine if two vertices connected
+Weighted Trees - Kept balanced
+Compress path by directly linking to parent
+
+HeapSort
+Build a heap from an array very quickly
+Exchange first (largest) and last (smallest) values and swap
+	-Then call sink, delete largest value
+	-Call again
+	-Eventually sorts largest values to back of array
+	-O(NlogN)
+	-Called "in-place", does not need extra space for sorting
+	-"Stable", items with same key value are kept in same order !(x_1, x_2 != x_2, x_1) 
+
+Priority Queues
+Max and Min keep respective value at top
+Heap - keeps all operation times at logN running times
+
+Symbol Table
+Linked List - Find walks through whole list
+Binary Search Tree - Need to keep balanced however
+Worst case - IF keys inserted in order, becomes one branch tree
+
+2-3 Tree
+Idea that: Keep tree balanced
+Same length paths from root to leaves
+Search - May encounter 3 node (3 children)
+Look at example/demo on slide - 3 node and 4 node split into 3 nodes
+WONT - be asked question on deletions
+
+Red-Black Trees
+Representation of a 2-3 tree, but using binary tree form
+Never want:
+	-two red edges touching. Move red branch to other side by rotating
+	-Lone branch on right. ???
+	-...???
+	-Look at rules of Red-Black trees
+
+Hash Tables
+symbol tables - best is red-black trees: O(LogN) Time
+hash table - Take key, make int for storing location
+	-Same int value = collision
+	-Collision Resolution?
+		+Make linked list of all objects linked to that location
+			*Can get fairly long
+			*If too long, make new longer hash table and reinsert objects
+		+Can get performance at approximately constant time
+		+Faster than Red-Black tree, but worst case is N (Red-Black has worst of 2LogN)
+Clustering - No need for lists! But as table gets full, have to look long ways to find slot
+
+
+
+
+
+
+
+
+
+
+
+
